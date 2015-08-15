@@ -12,6 +12,9 @@ deploy_member = [
 ]
 
 
+
+
+
 shop = [
 ["DS姫路砥堀店","9:40","10:00~18:00","https://docs.google.com/spreadsheets/d/1iypmRo88eMOOey-gK6x72HBX0NVj1xVu7tJ6WHm-VZQ/edit#gid=1918856296","http://maps.google.co.jp/?q=ドコモショップ姫路砥堀店"],
 ["DS道頓堀店","10:40","11:00~19:00","https://docs.google.com/spreadsheets/d/1wciHeAJ4oBRFe9-ff-_y3fl3b_V5ZsDyrz1Qfl45K0A/edit#gid=1918856296","http://maps.google.co.jp/?q=ドコモショップ道頓堀店"],
