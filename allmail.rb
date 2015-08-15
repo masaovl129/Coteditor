@@ -5,15 +5,10 @@ gmail = Gmail.connect('masahiroyoshida1209@gmail.com', '8EejBC7Yj6bQwVkG')
 
 #メンバーの名前とメールアドレス(いじる必要なし)
 
-
 #配置メンバーとメールと日付と店舗
 deploy_member = [
 ["DS西大路五条店","8","15","吉田","社員","masao9090@gmail.com","080-9999-2192","吉田","masao9090@gmail.com","","","","",""]
 ]
-
-
-
-
 
 shop = [
 ["DS姫路砥堀店","9:40","10:00~18:00","https://docs.google.com/spreadsheets/d/1iypmRo88eMOOey-gK6x72HBX0NVj1xVu7tJ6WHm-VZQ/edit#gid=1918856296","http://maps.google.co.jp/?q=ドコモショップ姫路砥堀店"],
@@ -85,7 +80,7 @@ end
     gmail.deliver do
         to "#{deploy_member[i][5]}"
         cc "promotion_management@visionary-inc.jp, #{deploy_member[i][8]}"
-        subject "テスト【店舗詳細】#{deploy_member[i][0]} #{deploy_member[i][1]}月#{deploy_member[i][2]}日"
+        subject "テスト【店舗詳細】#{deploy_member[i][0].gsub('DS','ドコモショップ')} #{deploy_member[i][1]}月#{deploy_member[i][2]}日"
         text_part do
             body "
 おつかれさまです
@@ -108,14 +103,11 @@ Visionary管理部です
 
 ■実施店舗名
 
-#{deploy_member[i][0]}
+#{deploy_member[i][0].gsub('DS','ドコモショップ')}
 
 ■店舗地図
 
-#{shop1[4]}
 http://maps.google.co.jp/?q=#{shop1[0].gsub('DS','ドコモショップ')}
-
-
 
 ■実施日程
 
@@ -128,7 +120,6 @@ http://maps.google.co.jp/?q=#{shop1[0].gsub('DS','ドコモショップ')}
 ■稼働時間
 
 #{shop1[2]}
-
 
 ※注意事項※
 ①入店時、必ず「Visionary」と名乗ること
